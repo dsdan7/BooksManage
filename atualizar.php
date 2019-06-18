@@ -7,11 +7,16 @@
       $autor=$_POST['autor'];
       $ano=$_POST['ano'];
       $isbn=$_POST['isbn'];
+      $cod=$POST['cod'];
       
-      $querry="insert into livro values(null,'$titulo','$autor','$ano','$isbn');";
+      $querry="UPDATE  book.livro SET
+        nm_titulo='$titulo',
+        nm_autor = '$autor',
+        nr_ano =  '$ano',
+        nr_ibsn =  '$isbn' WHERE  livro.nr_ibsn ='$cod';";
       
       mysqli_query($conecta,$querry);
-      echo "CADASTRADO COM SUCESSO";
+      echo "ATUALIZADO COM SUCESSO";
      }catch(Exception $e){
              echo "Erro ao cadastrar".$e; 
      }

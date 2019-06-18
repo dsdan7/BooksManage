@@ -4,7 +4,7 @@
                              //servidor   /user  senha        banco
                              
       $id=$_GET['id'];
-      $query="select * from livro where nr_ibsn=$id";
+      $query="select * from livro where cd_livro=$id";
       
       
       $resultado=mysqli_query($conecta,$query);
@@ -15,6 +15,7 @@
           while($linha=mysqli_fetch_assoc($resultado)){
               $registro=array(
                   'livros'=>array(
+                  'cod'=>$linha['cd_livro'],
                   'titulo'=>$linha['nm_titulo'],
                   'autor'=>$linha['nm_autor'],
                   'ano'=>$linha['nr_ano'],

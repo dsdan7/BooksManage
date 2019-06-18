@@ -5,7 +5,7 @@
                              
       $id=$_GET['id'];
       
-      $querry="DELETE FROM livro WHERE nr_ibsn = $id ";
+      $querry="DELETE FROM livro WHERE cd_livro = $id ";
       
       mysqli_query($conecta,$querry);
       echo "DELETADO COM SUCESSO";

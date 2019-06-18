@@ -16,7 +16,7 @@
           $i=0;
           while($linha=mysqli_fetch_assoc($resultado)){
               $registro['livros'][$i]=array(
-                  
+                  'cod'=>$linha['cd_livro'],
                   'titulo'=>$linha['nm_titulo'],
                   'autor'=>$linha['nm_autor'],
                   'ano'=>$linha['nr_ano'],
