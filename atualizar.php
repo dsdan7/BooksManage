@@ -7,13 +7,13 @@
       $autor=$_POST['autor'];
       $ano=$_POST['ano'];
       $isbn=$_POST['isbn'];
-      $cod=$POST['cod'];
+      $cod=$_POST['cod'];
       
       $querry="UPDATE  book.livro SET
         nm_titulo='$titulo',
         nm_autor = '$autor',
         nr_ano =  '$ano',
-        nr_ibsn =  '$isbn' WHERE  livro.nr_ibsn ='$cod';";
+        nr_ibsn =  '$isbn' WHERE  livro.cd_livro ='$cod';";
       
       mysqli_query($conecta,$querry);
       echo "ATUALIZADO COM SUCESSO";
